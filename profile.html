@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bio — Tade Domínguez</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+:root{--paper:#f1f0eb;--pad:clamp(16px,2.6vw,38px)}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:#111;font-family:"DM Sans",Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
+.site-head{position:fixed;z-index:40;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-start;padding:18px var(--pad);color:#fff;mix-blend-mode:difference}
+.identity,.menu{mix-blend-mode:normal}.identity{display:flex;flex-direction:column;gap:5px}.name{font-family:"Instrument Serif",Georgia,serif;font-size:42px;line-height:.84;font-weight:400;letter-spacing:-.01em}.name span{display:block}.role{font-size:11px;text-transform:uppercase;letter-spacing:.11em}.head-right{display:flex;gap:22px;align-items:flex-start}.menu{display:flex;gap:22px;font-size:11px;text-transform:uppercase;letter-spacing:.1em}.menu a:hover{opacity:.5}.lang{border:0;background:transparent;color:#111;padding:0;cursor:pointer;font-size:10px;text-transform:uppercase;letter-spacing:.11em}
+.profile-wrap{min-height:100vh;padding:145px var(--pad) 72px;display:grid;grid-template-columns:minmax(190px,300px) minmax(0,1fr);gap:clamp(55px,8vw,140px);align-items:start}
+.profile-photo{width:100%;max-width:235px;aspect-ratio:4/5;overflow:hidden}.profile-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.profile-copy{max-width:760px}.about-label{font-size:18px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;margin:0 0 45px}.bio{border-top:1px solid rgba(0,0,0,.22);padding-top:18px;font-size:15px;line-height:1.62}.bio p{margin:0 0 1.15em}.bio p:first-child{font-weight:600}.profile-meta{margin-top:38px;padding-top:13px;border-top:1px solid rgba(0,0,0,.18);display:flex;justify-content:space-between;gap:20px;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
+@media(max-width:760px){.site-head{padding:14px 12px}.name{font-size:31px}.menu{gap:11px;font-size:8px}.role{font-size:8px}.profile-wrap{padding:118px 12px 54px;grid-template-columns:1fr;gap:38px}.profile-photo{max-width:210px}.about-label{font-size:13px;margin-bottom:30px}.bio{font-size:13px}.profile-meta{display:block}.profile-meta span{display:block;margin-top:8px}}
+.lang{display:flex!important;align-items:center;gap:6px;border:0;background:transparent;color:inherit;padding:0;cursor:pointer}.lang img{width:22px;height:14px;object-fit:cover;display:block}.lang .slash{font-size:10px;line-height:1}.location-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.location-meta img{width:20px;height:13px;object-fit:cover;display:inline-block}</style>
+</head>
+<body>
+<header class="site-head">
+  <div class="identity"><a href="index.html" class="name"><span>Tade</span><span>Domínguez</span></a><div class="role" data-es="Director de fotografía" data-en="Cinematographer">Director de fotografía</div></div>
+  <div class="head-right"><nav class="menu"><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a><a href="profile.html">Bio</a><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></nav><button class="lang" onclick="toggleLanguage()" aria-label="Cambiar idioma"><img src="assets/flag-spain.png" alt="Español"><span class="slash">/</span><img src="assets/flag-uk.png" alt="English"></button></div>
+</header>
+<main class="profile-wrap">
+  <div class="profile-photo"><img src="assets/bio-tade.png" alt="Tade Domínguez"></div>
+  <div class="profile-copy">
+    <div class="about-label" data-es="SOBRE MÍ" data-en="ABOUT ME">SOBRE MÍ</div>
+    <div class="bio" data-lang="es">
+      <p>Director de fotografía y asistente de cámara.</p>
+      <p>Nací en 2003, en Montevideo, Uruguay. Finalicé mis estudios en la Escuela de Cine del Uruguay (ECU) y actualmente curso el Máster en Dirección de Fotografía en la Escola Superior de Cinema i Audiovisuals de Catalunya (ESCAC) en Barcelona.</p>
+      <p>Tengo la suerte de trabajar como Asistente de Cámara y Video Assist en producciones industriales donde obtengo conocimiento que luego vierto en mis trabajos como Director de fotografía.</p>
+      <p>Me interesa seguir formándome, tanto desde lo académico como desde la observación e intercambio con profesionales que admiro, para eventualmente poder ejercer principalmente como Director de fotografía.</p>
+    </div>
+    <div class="bio" data-lang="en" hidden>
+      <p>Cinematographer and camera assistant.</p>
+      <p>I was born in 2003 in Montevideo, Uruguay. I completed my studies at Escuela de Cine del Uruguay (ECU) and I am currently pursuing a Master's Degree in Cinematography at Escola Superior de Cinema i Audiovisuals de Catalunya (ESCAC) in Barcelona.</p>
+      <p>I have the opportunity to work as a Camera Assistant and Video Assist on professional productions, where I gain knowledge and experience that I later bring into my work as a cinematographer.</p>
+      <p>I am interested in continuing my training, both academically and through observation and exchange with professionals I admire, with the goal of eventually working primarily as a cinematographer.</p>
+    </div>
+    <div class="profile-meta"><span class="location-meta">Montevideo, Uruguay <img src="assets/flag-uruguay.png" alt="Uruguay"> / Barcelona, España <img src="assets/flag-spain.png" alt="España"></span><span data-es="Director de fotografía · Asistente de cámara" data-en="Cinematographer · Camera Assistant">Director de fotografía · Asistente de cámara</span></div>
+  </div>
+</main>
+<script>
+let lang='es';
+function setLang(l){lang=l;document.documentElement.lang=l;document.querySelectorAll('[data-es]').forEach(el=>el.textContent=el.dataset[l]);document.querySelectorAll('[data-lang]').forEach(el=>el.hidden=el.dataset.lang!==l)}
+function toggleLanguage(){setLang(lang==='es'?'en':'es')}
+document.addEventListener('DOMContentLoaded',()=>setLang('es'));
+</script>
+</body></html>

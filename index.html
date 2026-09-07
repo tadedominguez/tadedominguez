@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tade Domínguez — Director de fotografía</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+:root{--paper:#f1f0eb;--pad:clamp(16px,2.6vw,38px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#000;color:#fff;font-family:"DM Sans",Arial,sans-serif}a{color:inherit;text-decoration:none}img,video{display:block}button{font:inherit}
+.site-head{position:fixed;z-index:50;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-start;padding:18px var(--pad);color:#fff;mix-blend-mode:difference}
+.identity,.menu{mix-blend-mode:normal}.identity{display:flex;flex-direction:column;gap:5px}.name{font-family:"Instrument Serif",Georgia,serif;font-size:42px;line-height:.84;font-weight:400;letter-spacing:-.01em}.name span{display:block}.role{font-size:11px;text-transform:uppercase;letter-spacing:.11em}.head-right{display:flex;gap:22px;align-items:flex-start}.menu{display:flex;gap:22px;font-size:11px;text-transform:uppercase;letter-spacing:.1em}.menu a:hover{opacity:.5}.lang{border:0;background:transparent;color:#fff;padding:0;cursor:pointer;font-size:10px;text-transform:uppercase;letter-spacing:.11em}
+.hero{height:100svh;min-height:620px;position:relative;overflow:hidden;background:#000}.hero video{width:100%;height:100%;object-fit:cover}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),transparent 35%,transparent 70%,rgba(0,0,0,.16));pointer-events:none}
+.hero-caption{position:absolute;z-index:2;left:0;right:0;bottom:22px;display:flex;justify-content:center}.hero-work-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.58);padding:8px 11px;font-size:9px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;background:rgba(0,0,0,.08);backdrop-filter:blur(3px)}.hero-work-btn:hover{background:rgba(0,0,0,.24)}
+.break{background:#fff;color:#111;min-height:22vh;padding:76px var(--pad) 28px;display:flex;align-items:flex-end}.break-title{margin:0;font-size:18px;font-weight:700;letter-spacing:.34em;text-transform:uppercase}
+.work-grid{padding:0 var(--pad) 70px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;background:#fff;color:#111}
+.work-card{position:relative;aspect-ratio:16/9;overflow:hidden;background:#fff}.work-card img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease,filter .3s ease}.work-card:hover img{transform:scale(1.008);filter:brightness(.88)}.work-title{position:absolute;color:#fff;inset:0;margin:0;display:flex;align-items:center;justify-content:center;padding:20px;text-align:center;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:0;transform:translateY(4px);transition:.25s;text-shadow:0 1px 8px rgba(0,0,0,.5)}.work-card:hover .work-title{opacity:1;transform:none}.work-card[href="ahogadero.html"] img{transform:scale(1.18)}.work-card[href="ahogadero.html"]:hover img{transform:scale(1.19);filter:brightness(.88)}.work-card.placeholder{background:#e6e6e6}.work-card.placeholder .work-title{opacity:1;color:#111;text-shadow:none;transform:none}
+.end{min-height:34vh;background:var(--paper);color:#111;padding:26px var(--pad) 22px;display:flex;flex-direction:column;justify-content:flex-end}.footer{border-top:1px solid rgba(0,0,0,.22);padding-top:13px;display:flex;justify-content:space-between;align-items:flex-end;font-size:12px}.mail{font-size:16px;border-bottom:1px solid #111}.footer-id{text-align:right}
+@media(max-width:900px){.work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.site-head{padding:14px 12px}.name{font-size:31px}.menu{gap:11px;font-size:8px}.role{font-size:8px}.break{min-height:18vh;padding:58px 12px 20px}.break-title{font-size:13px}.work-grid{grid-template-columns:1fr;padding:0 12px 44px;gap:10px}.work-title{opacity:1;font-size:9px}.work-card img{filter:brightness(.9)}.footer{display:block}.footer-id{text-align:left;margin-top:26px}}
+.lang{display:flex!important;align-items:center;gap:6px;border:0;background:transparent;color:inherit;padding:0;cursor:pointer}.lang img{width:22px;height:14px;object-fit:cover;display:block}.lang .slash{font-size:10px;line-height:1}</style>
+</head>
+<body>
+<header class="site-head">
+  <div class="identity"><a href="#top" class="name"><span>Tade</span><span>Domínguez</span></a><div class="role" data-es="Director de fotografía" data-en="Cinematographer">Director de fotografía</div></div>
+  <div class="head-right"><nav class="menu"><a href="#top" data-es="Inicio" data-en="Home">Inicio</a><a href="profile.html">Bio</a><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></nav><button class="lang" onclick="toggleLanguage()" aria-label="Cambiar idioma"><img src="assets/flag-spain.png" alt="Español"><span class="slash">/</span><img src="assets/flag-uk.png" alt="English"></button></div>
+</header>
+<main id="top">
+<section class="hero">
+  <video autoplay muted loop playsinline preload="auto"><source src="assets/portada.mp4" type="video/mp4"></video>
+  <div class="hero-caption"><a class="hero-work-btn" href="#work"><span data-es="TRABAJOS" data-en="WORK">TRABAJOS</span><span>↓</span></a></div>
+</section>
+<section class="break" id="work"><h1 class="break-title" data-es="TRABAJOS" data-en="WORK">TRABAJOS</h1></section>
+<section class="work-grid">
+  <a class="work-card" href="tabula-rasa.html"><img src="assets/tabula-rasa/caratula.jpeg" alt="Tabula Rasa"><h2 class="work-title">TABULA RASA</h2></a>
+  <a class="work-card" href="drexler-taraca.html"><img src="assets/drexler-taraca/caratula.png" alt="Jorge Drexler — Taracá"><h2 class="work-title">JORGE DREXLER — TARACÁ (UNIDAD B)</h2></a>
+  <a class="work-card" href="festival-cinemateca.html"><img src="assets/festival-cinemateca/caratula.png" alt="Spot 44° Festival de Cinemateca"><h2 class="work-title">SPOT 44° FESTIVAL DE CINEMATECA</h2></a>
+  <a class="work-card" href="sublime.html"><img src="assets/sublime/caratula.png" alt="Sublime — Davus x Blua"><h2 class="work-title">SUBLIME — DAVUS X BLUA</h2></a>
+  <a class="work-card" href="uncanny.html"><img src="assets/uncanny/caratula.jpg" alt="Uncanny — A Small Madness"><h2 class="work-title">UNCANNY — A SMALL MADNESS</h2></a>
+  <a class="work-card" href="ahogadero.html"><img src="assets/ahogadero/caratula.jpg" alt="Ahogadero"><h2 class="work-title">AHOGADERO</h2></a>
+  <a class="work-card placeholder" href="de-abajo-se-ve.html"><h2 class="work-title">DE ABAJO SE VE — MARIANO BERMÚDEZ</h2></a>
+  <a class="work-card placeholder" href="festival-cinemateca-43.html"><h2 class="work-title">SPOT 43° FESTIVAL DE CINEMATECA</h2></a>
+  <a class="work-card placeholder" href="estacionamiento-cinemateca.html"><h2 class="work-title">SPOT ESTACIONAMIENTO CINEMATECA URUGUAYA</h2></a>
+</section>
+<section class="end" id="contact"><div class="footer"><a class="mail" href="mailto:tadedominguez@gmail.com">tadedominguez@gmail.com</a><div class="footer-id"><strong>Tade Domínguez</strong><br><span data-es="Director de fotografía" data-en="Cinematographer">Director de fotografía</span></div></div></section>
+</main>
+<script>
+let lang='es';
+function setLang(l){lang=l;document.documentElement.lang=l;document.querySelectorAll('[data-es]').forEach(el=>el.textContent=el.dataset[l]);}
+function toggleLanguage(){setLang(lang==='es'?'en':'es')}
+document.addEventListener('DOMContentLoaded',()=>setLang('es'));
+</script>
+</body></html>
